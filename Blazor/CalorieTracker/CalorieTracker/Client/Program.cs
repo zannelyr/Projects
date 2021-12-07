@@ -7,8 +7,9 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Syncfusion.Blazor;
 
-namespace calorie_tracker.Client
+namespace CalorieTracker.Client
 {
     public class Program
     {
@@ -18,6 +19,8 @@ namespace calorie_tracker.Client
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+            builder.Services.AddSyncfusionBlazor();
 
             await builder.Build().RunAsync();
         }

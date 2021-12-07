@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace calorie_tracker.Server
+namespace CalorieTracker.Server
 {
     public class Program
     {
