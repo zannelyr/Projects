@@ -22,6 +22,8 @@ namespace CalorieTracker.Client
 
             builder.Services.AddSyncfusionBlazor();
 
+            //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Your_License_Key");
+
             await builder.Build().RunAsync();
         }
     }

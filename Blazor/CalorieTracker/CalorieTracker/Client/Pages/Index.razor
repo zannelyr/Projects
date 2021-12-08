@@ -1,19 +1,7 @@
 ﻿@page "/"
 
-@using CalorieTracker.Shared
 
 <h1>Hello, world!</h1>
 
-<SfGrid TValue="Book" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <SfDataManager Url="/api/Books" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
-	<GridColumns>
-    <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" Visible="false"></GridColumn>
-    <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
-    <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
-    <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
-    <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
-    <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
-    </GridColumns>
-</SfGrid>
+
 

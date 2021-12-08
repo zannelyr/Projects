@@ -1,32 +1,24 @@
 ﻿@page "/tracker"
 
-<h1>Pets</h1>
 
-<TableTemplate Items="pets" Context="pet">
-    <TableHeader>
-        <th>ID</th>
-        <th>Name</th>
-    </TableHeader>
-    <RowTemplate>
-        <td>@pet.PetId</td>
-        <td>@pet.Name</td>
-    </RowTemplate>
-</TableTemplate>
+@using CalorieTracker.Shared
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+
+<SfGrid TValue="Book" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager Url="/api/Books" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+	<GridColumns>
+    <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" Visible="false"></GridColumn>
+    <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
+    <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
+    <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
+    <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
+    <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
 @code {
 
-    Pet pet = new Pet();
-
-    private List<Pet> pets = new()
-    {
-        new Pet { PetId = 2, Name = "Mr. Bigglesworth" },
-        new Pet { PetId = 4, Name = "Salem Saberhagen" },
-        new Pet { PetId = 7, Name = "K-9" }
-    };
-
-    private class Pet
-    {
-        public int PetId { get; set; }
-        public string? Name { get; set; }
-    }
 }
