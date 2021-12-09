@@ -25,6 +25,7 @@ else
                     <th>Quantity</th>
                     <th>Measure</th>
                     <th>Calories</th>
+                    <th>Track</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,9 @@ else
                         <td>@it.Quantity</td>
                         <td>@it.Measure</td>
                         <td>@it.Calories</td>
+                        <td>
+                        <a class="btn btn-success" href="tracker/add/@it.Id"><i class="oi oi-plus"></i> Add to tracker</a>
+                        </td>
                     </tr>
                 }
             </tbody>

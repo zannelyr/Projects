@@ -12,6 +12,7 @@ namespace CalorieTrackerEF.Server.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         { }
         public DbSet<Item> Items { get; set; }
+        public DbSet<TrackItem> TrackedItems { get; set; }
     }
 
 }
