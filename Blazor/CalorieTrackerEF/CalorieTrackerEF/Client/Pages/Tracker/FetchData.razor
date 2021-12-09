@@ -1,0 +1,55 @@
+﻿@page "/tracker"
+@inject HttpClient client
+@inject IJSRuntime js
+
+<h1>Tracker</h1>
+
+<br>
+
+@if (items == null)
+{
+    <text>Loading...</text>
+}
+else if (items.Length == 0)
+{
+    <text>No Records Found.</text>
+}
+else
+{
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Measure</th>
+                    <th>Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Item it in items)
+                {
+                    <tr>
+                        <td>@it.Id</td>
+                        <td>@it.ItemName</td>
+                        <td>@it.Category</td>
+                        <td>@it.Quantity</td>
+                        <td>@it.Measure</td>
+                        <td>@it.Calories</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+}
+
+
+@code {
+
+	Item[] items { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		items = await client.GetFromJsonAsync<Item[]>("api/item");
+	}
+}

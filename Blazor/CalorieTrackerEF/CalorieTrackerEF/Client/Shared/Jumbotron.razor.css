@@ -1,0 +1,9 @@
+.jumbotron {
+    background-size: cover;
+    background-image: url(/img/fruits-veggies.jpg);
+    height: 20rem;
+}
+
+    .jumbotron .display-4 {
+        color: lightgray;
+    }
