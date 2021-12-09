@@ -13,6 +13,7 @@ namespace CalorieTrackerEF.Server.Data
         { }
         public DbSet<Item> Items { get; set; }
         public DbSet<TrackItem> TrackedItems { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 
 }
