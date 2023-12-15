@@ -4,62 +4,77 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Person List</h2>
+<div class="container">
+    <header>
+        <h1>Lift-and-Shift Demo Application</h1>
+    </header>
 
-<form method="post">
-    <label for="selectedDbContext">Select Database Context:</label>
-    <select name="selectedDbContext">
-        <option value="Local">LocalDbContext</option>
-        <option value="Azure">AzureDbContext</option>
-    </select>
-    <button type="submit">Submit</button>
-</form>
+    <div class="form_container">
+        <div class="text">
+            Select Database
+        </div>
 
-@if (Model != null)
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.BusinessEntityID)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FirstName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MiddleName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LastName)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var person in Model)
-            {
+        <form method="post">
+            <label for="selectedDbContext"></label>
+            <select name="selectedDbContext">
+                <option value="Local">LocalDbContext</option>
+                <option value="Azure">AzureDbContext</option>
+            </select>
+       
+            <button class="btn" type="submit"><span class="btn-text">Submit</span></button>
+      
+        </form>
+
+    </div>
+
+    @if (Model != null)
+    {
+        <h2>Person List</h2>
+        <table class="styled-table">
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => person.BusinessEntityID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => person.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => person.FirstName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => person.MiddleName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => person.LastName)
-                    </td>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BusinessEntityID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MiddleName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var person in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => person.BusinessEntityID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => person.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => person.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => person.MiddleName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => person.LastName)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
-}
+    }
+
+</div>
