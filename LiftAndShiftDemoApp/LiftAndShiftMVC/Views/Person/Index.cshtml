@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LiftAndShiftMVC.Models.Person>
+﻿@model LiftAndShiftMVC.ViewModel.PersonViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -50,45 +50,49 @@
 @if (Model != null)
 {
     <h2>Person List</h2>
+    <div>
+        <p>Records displayed: @Model.RecordCount</p>
+    </div>
+
     <table class="styled-table">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.BusinessEntityID)
+                    Business Entity ID
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Title)
+                    Title
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.FirstName)
+                    First Name
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.MiddleName)
+                    Middle Name
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.LastName)
+                    LastName
                 </th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var person in Model)
+            @foreach (var person in Model.Persons)
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => person.BusinessEntityID)
+                        @person.BusinessEntityID
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => person.Title)
+                        @person.Title
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => person.FirstName)
+                        @person.FirstName
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => person.MiddleName)
+                        @person.MiddleName
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => person.LastName)
+                        @person.LastName
                     </td>
                 </tr>
             }

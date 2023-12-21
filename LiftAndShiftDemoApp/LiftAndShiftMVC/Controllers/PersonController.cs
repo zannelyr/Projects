@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using LiftAndShiftMVC.Data;
 using LiftAndShiftMVC.Models;
+using LiftAndShiftMVC.ViewModel;
 
 namespace LiftAndShiftMVC.Controllers
 {
@@ -41,8 +42,14 @@ namespace LiftAndShiftMVC.Controllers
             }
 
             var persons = await query.ToListAsync();
-            return View(persons);
 
+            var viewModel = new PersonViewModel
+            {
+                Persons = persons,
+                RecordCount = recordCount
+            };
+
+            return View(viewModel);
         }
     }
 }
