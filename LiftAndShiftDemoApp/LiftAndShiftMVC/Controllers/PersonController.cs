@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LiftAndShiftMVC.Data;
+using LiftAndShiftMVC.Models;
 
 namespace LiftAndShiftMVC.Controllers
 {
@@ -21,20 +22,27 @@ namespace LiftAndShiftMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(string selectedDbContext)
+        public async Task<IActionResult> Index(string selectedDbContext, int recordCount)
         {
+            IQueryable<Person> query;
+
             if (selectedDbContext == "Local")
             {
-                return _localDbContext.Person != null ?
-                            View(await _localDbContext.Person.ToListAsync()) :
-                            Problem("Entity set 'LocalDbContext.Person'  is null.");
+                query = _localDbContext.Person;
             }
             else
             {
-                return _azureDbContext.Person != null ?
-                            View(await _azureDbContext.Person.ToListAsync()) :
-                            Problem("Entity set 'AzureDbContext.Person'  is null.");
+                query = _azureDbContext.Person;
             }
+
+            if (recordCount > 0 && recordCount < await query.CountAsync())
+            {
+                query = query.Take(recordCount);
+            }
+
+            var persons = await query.ToListAsync();
+            return View(persons);
+
         }
     }
 }
