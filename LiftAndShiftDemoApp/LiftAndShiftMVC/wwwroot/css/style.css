@@ -35,20 +35,20 @@ h1, h2, h3, h4, h5, h6 {
     background: #1a1814;
 }
 
-    #preloader:before {
-        content: "";
-        position: fixed;
-        top: calc(50% - 30px);
-        left: calc(50% - 30px);
-        border: 6px solid #1a1814;
-        border-top-color: #cda45e;
-        border-bottom-color: #cda45e;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        -webkit-animation: animate-preloader 1s linear infinite;
-        animation: animate-preloader 1s linear infinite;
-    }
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #1a1814;
+    border-top-color: #cda45e;
+    border-bottom-color: #cda45e;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
 
 @-webkit-keyframes animate-preloader {
     0% {
@@ -82,30 +82,30 @@ h1, h2, h3, h4, h5, h6 {
     top: 40px;
 }
 
-    #header.header-scrolled {
-        top: 0;
-        background: rgba(0, 0, 0, 0.85);
-        border-bottom: 1px solid #37332a;
-    }
+#header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #37332a;
+}
 
-    #header .logo {
-        font-size: 28px;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        font-weight: 300;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-family: "Poppins", sans-serif;
-    }
+#header .logo {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+}
 
-        #header .logo a {
-            color: #fff;
-        }
+#header .logo a {
+    color: #fff;
+}
 
-        #header .logo img {
-            max-height: 40px;
-        }
+#header .logo img {
+    max-height: 40px;
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -117,38 +117,38 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-    .navbar ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        list-style: none;
-        align-items: center;
-    }
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
 
-    .navbar li {
-        position: relative;
-    }
+.navbar li {
+    position: relative;
+}
 
-    .navbar a, .navbar a:focus {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0 10px 30px;
-        color: #fff;
-        white-space: nowrap;
-        transition: 0.3s;
-        font-size: 14px;
-    }
+.navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+}
 
-        .navbar a i, .navbar a:focus i {
-            font-size: 12px;
-            line-height: 0;
-            margin-left: 5px;
-        }
+.navbar a i, .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
 
-        .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-            color: #7232bf;
-        }
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #7232bf;
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -187,39 +187,39 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 999;
 }
 
-    .navbar-mobile .mobile-nav-toggle {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-    }
+.navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
 
-    .navbar-mobile ul {
-        display: block;
-        position: absolute;
-        top: 55px;
-        right: 15px;
-        bottom: 15px;
-        left: 15px;
-        padding: 10px 0;
-        border-radius: 6px;
-        background-color: #fff;
-        overflow-y: auto;
-        transition: 0.3s;
-    }
+.navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+}
 
-    .navbar-mobile a, .navbar-mobile a:focus {
-        padding: 10px 20px;
-        font-size: 15px;
-        color: #1a1814;
-    }
+.navbar-mobile a, .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #1a1814;
+}
 
-        .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-            color: #cda45e;
-        }
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+    color: #cda45e;
+}
 
-    .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
-        margin: 15px;
-    }
+.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+    margin: 15px;
+}
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -244,19 +244,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-    #hero:before {
-        content: "";
-        background: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
+#hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
-    #hero .container {
-        padding-top: 110px;
-    }
+#hero .container {
+    padding-top: 110px;
+}
 
 @media (max-width: 992px) {
     #hero .container {
@@ -273,9 +273,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Poppins", sans-serif;
 }
 
-    #hero h1 span {
-        color: #e0c7ff;
-    }
+#hero h1 span {
+    color: #e0c7ff;
+}
 
 #hero h2 {
     color: #eee;
@@ -351,35 +351,35 @@ section {
     padding-bottom: 40px;
 }
 
-    .section-title h2 {
-        font-size: 14px;
-        font-weight: 500;
-        padding: 0;
-        line-height: 1px;
-        margin: 0 0 5px 0;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #aaaaaa;
-        font-family: "Poppins", sans-serif;
-    }
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+}
 
-        .section-title h2::after {
-            content: "";
-            width: 120px;
-            height: 1px;
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 4px 10px;
-        }
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 4px 10px;
+}
 
-    .section-title p {
-        margin: 0;
-        margin: 0;
-        font-size: 36px;
-        font-weight: 700;
-        font-family: "Playfair Display", serif;
-        color: #e0c7ff;
-    }
+.section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: #e0c7ff;
+}
 
 
 /*--------------------------------------------------------------
@@ -389,91 +389,154 @@ section {
     width: 100%;
 }
 
-    .form-section .db-form .form-group {
-        padding-bottom: 8px;
-    }
+.form-section .db-form .form-group {
+    padding-bottom: 8px;
+}
 
-    .form-section .db-form .sent-message {
-        display: none;
-        color: #fff;
-        background: #18d26e;
-        text-align: center;
-        padding: 15px;
-        font-weight: 600;
-    }
+.form-section .db-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
 
-    .form-section .db-form .loading {
-        display: none;
-        text-align: center;
-        padding: 15px;
-    }
+.form-section .db-form .loading {
+    display: none;
+    text-align: center;
+    padding: 15px;
+}
 
-        .form-section .db-form .loading:before {
-            content: "";
-            display: inline-block;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            margin: 0 10px -6px 0;
-            border: 3px solid #cda45e;
-            border-top-color: #1a1814;
-            -webkit-animation: animate-loading 1s linear infinite;
-            animation: animate-loading 1s linear infinite;
-        }
+.form-section .db-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #cda45e;
+    border-top-color: #1a1814;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
 
-    .form-section .db-form input, .form-section .db-form textarea, .form-section .db-form select {
-        border-radius: 0;
-        box-shadow: none;
-        font-size: 14px;
-        background: #0c0b09;
-        border-color: #f3eaff;
-        color: white;
-    }
+.form-section .db-form input, .form-section .db-form textarea, .form-section .db-form select {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: #0c0b09;
+    border-color: #f3eaff;
+    color: white;
+}
 
-        .form-section .db-form input::-webkit-input-placeholder, .form-section .db-form textarea::-webkit-input-placeholder, .form-section .db-form select::-webkit-select-placeholder {
-            color: #a49b89;
-        }
-       .form-section .db-form input::-moz-placeholder, .form-section .db-form textarea::-moz-placeholder, .form-section .db-form select::-moz-placeholder {
-            color: #a49b89;
-        }
+.form-section .db-form input::-webkit-input-placeholder, .form-section .db-form textarea::-webkit-input-placeholder, .form-section .db-form select::-webkit-select-placeholder {
+    color: #a49b89;
+}
 
-        .form-section .db-form input::placeholder, .form-section .db-form textarea::placeholder {
-            color: #a49b89;
-        }
+.form-section .db-form input::-moz-placeholder, .form-section .db-form textarea::-moz-placeholder, .form-section .db-form select::-moz-placeholder {
+    color: #a49b89;
+}
 
-        .form-section .db-form input:focus, .form-section .db-form textarea:focus {
-            border-color: #cda45e;
-        }
+.form-section .db-form input::placeholder, .form-section .db-form textarea::placeholder {
+    color: #a49b89;
+}
 
-    .form-section .db-form input {
-        height: 44px;
-    }
+.form-section .db-form input:focus, .form-section .db-form textarea:focus {
+    border-color: #cda45e;
+}
 
-    .form-section .db-form textarea {
-        padding: 10px 12px;
-    }
+.form-section .db-form input {
+    height: 44px;
+}
 
-    .form-section .db-form button[type=submit] {
-        background: #370079;
-        border: 0;
-        padding: 10px 35px;
-        color: #fff;
-        transition: 0.4s;
-        border-radius: 50px;
-    }
+.form-section .db-form textarea {
+    padding: 10px 12px;
+}
 
-        .form-section .db-form button[type=submit]:hover {
-            background: #7232bf;
-        }
+.form-section .db-form button[type=submit] {
+    background: #370079;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.form-section .db-form button[type=submit]:hover {
+    background: #7232bf;
+}
 
 /* Drop down select*/
 .form-section .db-form select {
     height: 44px;
 }
 
-    .form-section .db-form select:focus {
-        border-color: #370079;
-    }
+.form-section .db-form select:focus {
+    border-color: #370079;
+}
+
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+
+/*TABLE STYLE*/
+/*
+Add border-collapse to ensure there is no space between the cell borders.
+Add box-shadow to add a subtle transparent shadow around the table.
+*/
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/*TABLE HEADER*/
+
+/*backgound color, font color and text align*/
+.styled-table thead tr {
+    background-color: #e0c7ff;
+    color: #000000;
+    display: block;
+}
+
+/* TABLE CELLS*/
+
+/*Space out the table cells*/
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+/* TABLE ROWS*/
+
+.styled-table tbody {
+    display: block;
+    overflow: auto;
+    height: 900px;
+    width: 100%;
+    color: #000000;
+}
+
+/*Add a bottom border to each row for separation*/
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: #f3eaff;
+}
+
+/*Add a lighter background to every second row to help readability*/
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+/*Add a dark border to the very last row to signify the end of the table*/
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
 
 
 /*--------------------------------------------------------------
@@ -486,14 +549,14 @@ section {
     font-size: 14px;
 }
 
-    #footer .copyright {
-        text-align: center;
-        padding-top: 30px;
-    }
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
 
-    #footer .credits {
-        padding-top: 10px;
-        text-align: center;
-        font-size: 13px;
-        color: #fff;
-    }
+#footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
